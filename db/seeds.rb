@@ -8,16 +8,7 @@
 
 require 'faker'
 
-User.destroy_all
-10.times do
-  User.create!(
-    first_name: Faker::Name.first_name, 
-    last_name: Faker::Name.last_name,
-    description: Faker::Hacker.say_something_smart,
-    email: Faker::Internet.email,
-    age: rand(18..65)
-    )
-end
+
 
 City.destroy_all
 20.times do
@@ -27,10 +18,23 @@ City.destroy_all
     )
 end
 
+User.destroy_all
+10.times do
+  User.create!(
+    first_name: Faker::Name.first_name, 
+    last_name: Faker::Name.last_name,
+    description: Faker::Hacker.say_something_smart,
+    email: Faker::Internet.email,
+    age: rand(18..65),
+    city: City.all.sample
+    )
+end
+
 Gosssip.destroy_all
 20.times do
   Gosssip.create!(
     title: Faker::Book.title, 
-    content: Faker::Hacker.say_something_smart
+    content: Faker::Hacker.say_something_smart,
+    user: User.all.sample
     )
 end

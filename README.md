@@ -28,6 +28,9 @@ L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par
 
 > rails c
 >
+> tp User.all
+>
+> tp City.all
 
 > 
 
