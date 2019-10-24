@@ -28,17 +28,7 @@ L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par
 
 > rails c
 >
-> tp Dog.all
->
-> tp DogSitter.all
->
-> tp City.all
->
-> tp Stroll.all
->
-> tp DogInscription.all
->
-> tp DogSitterInscription.all
+
 > 
 
 <p> https://www.thehackingproject.org/dashboard/courses/1/weeks/4/days/4?locale=fr </p>
