@@ -40,6 +40,36 @@ L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par
 >
 
 
+<h3> test du private message : </h3>
+
+message1 = PrivateMessage.new
+
+sender = User.all[1]
+
+message1.content = "Voici mon message !"
+message1.sender_id = sender.id
+message1.save 
+
+recip1 = Recipient.new
+recip2 = Recipient.new
+recip3 = Recipient.new
+
+recipient1 = User.all[4]
+recipient2 = User.all[2]
+recipient2 = User.all[3]
+
+recip1.user_id = recipient1.id   
+recip1.private_message_id = message1.id
+recip1.save
+
+recip2.user_id = recipient2.id   
+recip2.private_message_id = message1.id
+recip2.save
+
+recip3.user_id = recipient3.id   
+recip3.private_message_id = message1.id
+recip3.save
+
 <p> https://www.thehackingproject.org/dashboard/courses/1/weeks/4/days/4?locale=fr </p>
 
 <h2> Gem rajoutée </h2>

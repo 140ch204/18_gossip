@@ -1,0 +1,2 @@
+class CreateRecipient < ApplicationRecord
+end
