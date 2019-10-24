@@ -31,8 +31,14 @@ L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par
 > tp User.all
 >
 > tp City.all
+>
+> tp Gosssip.all
+>
+> tp Tag.all
+>
+> tp TagGossipLink.all
+>
 
-> 
 
 <p> https://www.thehackingproject.org/dashboard/courses/1/weeks/4/days/4?locale=fr </p>
 

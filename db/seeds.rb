@@ -38,3 +38,19 @@ Gosssip.destroy_all
     user: User.all.sample
     )
 end
+
+
+Tag.destroy_all
+10.times do
+  Tag.create!(
+    title: Faker::Book.genre, 
+    )
+end
+
+TagGossipLink.destroy_all
+10.times do
+  TagGossipLink.create!(
+    tag: Tag.all.sample,
+    gosssip: Gosssip.all.sample 
+    )
+end
