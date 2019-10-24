@@ -48,9 +48,11 @@ Tag.destroy_all
 end
 
 TagGossipLink.destroy_all
-10.times do
+Gosssip.all.each do |one_gossip|
   TagGossipLink.create!(
     tag: Tag.all.sample,
-    gosssip: Gosssip.all.sample 
+    gosssip: one_gossip
     )
+  
 end
+

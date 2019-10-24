@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_193041) do
+ActiveRecord::Schema.define(version: 2019_10_24_203705) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,23 @@ ActiveRecord::Schema.define(version: 2019_10_24_193041) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_gosssips_on_user_id"
+  end
+
+  create_table "private_message_receivers", force: :cascade do |t|
+    t.integer "private_message_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["private_message_id"], name: "index_private_message_receivers_on_private_message_id"
+    t.index ["user_id"], name: "index_private_message_receivers_on_user_id"
+  end
+
+  create_table "private_messages", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_private_messages_on_user_id"
   end
 
   create_table "tag_gossip_links", force: :cascade do |t|
